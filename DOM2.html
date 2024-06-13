@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações matemáticas</title>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <div id="calcular"></div>
+
+    <input type="button" value="Calcular soma" onclick="soma()">
+    <input type="button" value="Calcular subtração" onclick="sub()">
+    <input type="button" value="Calcular multiplicação" onclick="mult()">
+    <input type="button" value="Calcular divisão" onclick="dividir()">
+
+    <script>
+        function soma() {
+            var num1 = document.getElementById('num1')
+            var num2 = document.getElementById('num2')
+            var resSoma = document.getElementById('calcular')
+            var num1 = Number(num1.value)
+            var num2 = Number(num2.value)
+            var soma = num1 + num2
+            resSoma.innerHTML = `O resultado da soma entre ${num1} e ${num2} é ${soma}.`
+        }
+
+        function sub() {
+            var num1 = document.getElementById('num1')
+            var num2 = document.getElementById('num2')
+            var resSub = document.getElementById('calcular')
+            var num1 = Number(num1.value)
+            var num2 = Number(num2.value)
+            var subt = num1 - num2
+            resSub.innerHTML = `O resultado da subtração entre ${num1} e ${num2} é ${subt}.`
+        }
+
+        function mult() {
+            var num1 = document.getElementById('num1')
+            var num2 = document.getElementById('num2')
+            var resMult = document.getElementById('calcular')
+            var num1 = Number(num1.value)
+            var num2 = Number(num2.value)
+            var mult = num1 * num2
+            resMult.innerHTML = `O resultado da multiplicação entre ${num1} e ${num2} é ${mult}.`
+        }
+
+        function dividir() {
+            var num1 = document.getElementById('num1')
+            var num2 = document.getElementById('num2')
+            var resDiv = document.getElementById('calcular')
+            var num1 = Number(num1.value)
+            var num2 = Number(num2.value)
+            var div = num1 / num2
+            resDiv.innerHTML = `O resultado da divisão entre ${num1} e ${num2} é ${div}.`
+        }
+
+        var b = window.document.body
+        b.style.fontSize = "larger"
+    </script>
+</body>
+
+</html>
